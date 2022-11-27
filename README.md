@@ -1,1 +1,1 @@
-"# outer-space-rocket-race" 
+# outer-space-rocket-race
