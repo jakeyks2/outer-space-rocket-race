@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -5803234662897788524}
   - component: {fileID: -4461931537334795112}
   - component: {fileID: 8449618907116960708}
+  - component: {fileID: 5733986341777249977}
   m_Layer: 0
   m_Name: AsteroidSimple
   m_TagString: Obstacle
@@ -147,3 +148,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedX: 0
   speedY: 0
+--- !u!114 &5733986341777249977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233311909290307464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d203758adba21db42aca6a5e592d5105, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startHealth: 1

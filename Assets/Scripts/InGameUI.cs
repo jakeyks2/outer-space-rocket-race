@@ -25,7 +25,7 @@ public class InGameUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score.text = $"Score: {playerScript.score}";
-        time.text = $"Time: {Mathf.Floor(playerScript.time / 60):0}:{Mathf.Floor(playerScript.time % 60):00}";
+        score.text = $"Score: {playerScript.Score}";
+        time.text = $"Time: {Mathf.Floor(playerScript.TimeRemaining / 60):0}:{Mathf.Floor(playerScript.TimeRemaining % 60):00}";
     }
 }

@@ -519,6 +519,7 @@ GameObject:
   - component: {fileID: 939122797}
   - component: {fileID: 939122798}
   - component: {fileID: 939122799}
+  - component: {fileID: 939122800}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Player
@@ -553,8 +554,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27e777d467890554395c072962eb2099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedX: 10
-  speedY: 10
+  speedX: 8
+  speedY: 8
   rb: {fileID: 939122798}
 --- !u!212 &939122795
 SpriteRenderer:
@@ -679,8 +680,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097482d2b8440844e8d10d53a49b093f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
-  time: 10000
+  startTime: 90
+--- !u!114 &939122800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939122791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2198b5e5a952454488c29501d798561d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireKey: Fire1
+  laserPrefab: {fileID: 527177676672001393, guid: 6c85960fa7785c648968441ee2980699, type: 3}
+  laserSpeed: 10
 --- !u!1001 &1262051018
 PrefabInstance:
   m_ObjectHideFlags: 0

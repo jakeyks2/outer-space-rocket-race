@@ -5,20 +5,47 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     //Tracks the player's score
-    public int score;
+    private int score;
+
+    public int Score
+    {
+        get
+        {
+            return score;
+        }
+        set
+        {
+            score = value;
+        }
+    }
+
+    //Allows the starting time to be set within Unity
+    public float startTime;
 
     //Tracks the player's time remaining
-    public float time;
+    private float timeRemaining;
+
+    public float TimeRemaining
+    {
+        get
+        {
+            return timeRemaining;
+        }
+        set
+        {
+            timeRemaining = value;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        TimeRemaining = startTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        time -= Time.deltaTime;
+        TimeRemaining -= Time.deltaTime;
     }
 }
