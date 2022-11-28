@@ -4,10 +4,25 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    //Tracks the player's score
-    private int score;
+    private List<GameObject> currentPowerups = new List<GameObject>();
+    public List<GameObject> CurrentPowerups
+    {
+        get
+        {
+            return currentPowerups;
+        }
+        set
+        {
+            currentPowerups = value;
+        }
+    }
 
-    public int Score
+    public float scoreLossPerSecond;
+
+    //Tracks the player's score
+    private float score;
+
+    public float Score
     {
         get
         {
@@ -40,12 +55,14 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Score = startTime * scoreLossPerSecond;
         TimeRemaining = startTime;
     }
 
     // Update is called once per frame
     void Update()
     {
+        Score -= Time.deltaTime * scoreLossPerSecond;
         TimeRemaining -= Time.deltaTime;
     }
 }

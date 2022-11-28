@@ -6,6 +6,8 @@ public class LaserScript : MonoBehaviour
 {
     public Vector2 velocity;
     public Rigidbody2D rb;
+    public GameObject particles;
+    public Player owningPlayerScript;
 
     void FixedUpdate()
     {
@@ -22,6 +24,8 @@ public class LaserScript : MonoBehaviour
         if (collision.gameObject.tag == "Obstacle")
         {
             collision.gameObject.GetComponent<Asteroid>().TakeDamage(1);
+            Instantiate(particles, transform.position, Quaternion.identity);
+            owningPlayerScript.Score += 10;
             Destroy(gameObject);
         }
     }

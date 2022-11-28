@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ShipCollision : MonoBehaviour
 {
+    public GameObject ui;
+
     //Called when the ship enters a trigger collider
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -16,6 +18,12 @@ public class ShipCollision : MonoBehaviour
 #else
             Application.Quit();
 #endif
+        }
+
+        if (collision.tag == "Powerup")
+        {
+            gameObject.GetComponent<Player>().CurrentPowerups.Add(collision.gameObject.GetComponent<Powerup>().Pickup(gameObject));
+            ui.GetComponent<InGameUI>().IsDirty = true;
         }
     }
 }

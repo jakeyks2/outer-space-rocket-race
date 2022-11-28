@@ -12,6 +12,8 @@ public class ShipMovement : MonoBehaviour
     //The ship's Rigidbody 2D
     public Rigidbody2D rb;
 
+    public AudioSource audioSource;
+
     //The vector the ship will move towards. Initialised as zero i.e. no movment
     Vector2 movementVector = Vector2.zero;
 
@@ -28,6 +30,18 @@ public class ShipMovement : MonoBehaviour
         {
             //Rotate the ship to face its movement
             rb.MoveRotation(Quaternion.LookRotation(Vector3.forward, movementVector));
+
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
+        }
+        else
+        {
+            if (audioSource.isPlaying)
+            {
+                audioSource.Pause();
+            }
         }
     }
 }
