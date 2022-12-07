@@ -126,4 +126,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 0
   effectPrefab: {fileID: 7873784734297527947, guid: 92974c9caad373a4aab70b6e0da630a2, type: 3}
+  uiTag: UI
   score: 100

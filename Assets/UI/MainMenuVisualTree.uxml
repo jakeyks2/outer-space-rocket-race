@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Main" style="flex-grow: 1; background-color: rgb(6, 0, 77);">
+        <ui:VisualElement name="ButtonContainer" style="top: 40%; bottom: auto; height: 50%; width: 20%; left: 40%;">
+            <ui:Button text="1 Player" display-tooltip-when-elided="true" name="1PButton" style="width: auto; flex-grow: 1; margin-left: 40px; margin-right: 40px; margin-top: 20px; margin-bottom: 20px; font-size: 40%;" />
+            <ui:Button text="2 Player" display-tooltip-when-elided="true" name="2PButton" style="flex-grow: 1; margin-left: 40px; margin-right: 40px; margin-top: 20px; margin-bottom: 20px; font-size: 40%;" />
+            <ui:Button text="Quit" display-tooltip-when-elided="true" name="QuitButton" style="flex-grow: 1; margin-left: 40px; margin-right: 40px; margin-top: 20px; margin-bottom: 20px; font-size: 40%;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

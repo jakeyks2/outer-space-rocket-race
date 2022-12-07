@@ -7,12 +7,14 @@ public class Powerup : MonoBehaviour
 {
     public float duration;
     public GameObject effectPrefab;
-    public GameObject ui;
+    public string uiTag;
+    
+    GameObject ui;
 
     // Start is called before the first frame update
     void Start()
     {
-        ui = GameObject.FindGameObjectWithTag("UI");
+        ui = GameObject.FindGameObjectWithTag(uiTag);
     }
 
     // Update is called once per frame

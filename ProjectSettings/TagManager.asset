@@ -7,6 +7,7 @@ TagManager:
   - Obstacle
   - Powerup
   - UI
+  - UI2
   layers:
   - Default
   - TransparentFX

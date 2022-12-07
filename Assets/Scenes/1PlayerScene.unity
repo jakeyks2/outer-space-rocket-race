@@ -278,6 +278,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab64ee6a316518645a9e05023f34bb90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 939122791}
+  yOFfset: 0
 --- !u!82 &519420034
 AudioSource:
   m_ObjectHideFlags: 0
@@ -471,6 +473,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f497a00fee5a0624c8534f0983ad7f60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 939122791}
+  yOFfset: 0
 --- !u!1001 &585617869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -648,6 +652,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShootingPowerup (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8381936259871015307, guid: 26b21fb159fa6144db0883133b74719c, type: 3}
+      propertyPath: uiTag
+      value: UI
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26b21fb159fa6144db0883133b74719c, type: 3}
 --- !u!1001 &903551136
@@ -767,6 +775,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27e777d467890554395c072962eb2099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontalMoveKeys: HorizontalPlayer1
+  verticalMoveKeys: VerticalPlayer1
   speedX: 8
   speedY: 8
   rb: {fileID: 939122798}
@@ -897,6 +907,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreLossPerSecond: 10
   startTime: 150
+  mainCamera: {fileID: 519420031}
 --- !u!114 &939122800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -909,9 +920,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2198b5e5a952454488c29501d798561d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireKey: Fire1
+  fireKey: FirePlayer1
   laserPrefab: {fileID: 527177676672001393, guid: 6c85960fa7785c648968441ee2980699, type: 3}
-  laserSpeed: 10
+  laserSpeed: 30
   laserCooldown: 0.5
   audioSource: {fileID: 939122801}
   laserAudio: {fileID: 8300000, guid: 2673652ebfb7e9043a4ac1fbdb30fe78, type: 3}
@@ -1298,7 +1309,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2012459647
 MonoBehaviour:
@@ -1314,6 +1325,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 939122791}
   document: {fileID: 2012459645}
+--- !u!1001 &182464694668232441
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 182464693670824897, guid: bffe793f728141541903da4b5d86486c, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 182464693670824897, guid: bffe793f728141541903da4b5d86486c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.6267691
+      objectReference: {fileID: 0}
+    - target: {fileID: 182464693670824897, guid: bffe793f728141541903da4b5d86486c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.914654
+      objectReference: {fileID: 0}
+    - target: {fileID: 182464693670824897, guid: bffe793f728141541903da4b5d86486c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 182464693670824897, guid: bffe793f728141541903da4b5d86486c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 182464693670824897, guid: bffe793f728141541903da4b5d86486c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 182464693670824897, guid: bffe793f728141541903da4b5d86486c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 182464693670824897, guid: bffe793f728141541903da4b5d86486c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 182464693670824897, guid: bffe793f728141541903da4b5d86486c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 182464693670824897, guid: bffe793f728141541903da4b5d86486c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 182464693670824897, guid: bffe793f728141541903da4b5d86486c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 182464693670824909, guid: bffe793f728141541903da4b5d86486c, type: 3}
+      propertyPath: m_Name
+      value: AsteroidPowerup
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bffe793f728141541903da4b5d86486c, type: 3}
 --- !u!1001 &8777488845888801740
 PrefabInstance:
   m_ObjectHideFlags: 0
