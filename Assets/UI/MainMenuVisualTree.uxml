@@ -1,9 +1,30 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:VisualElement name="Main" style="flex-grow: 1; background-color: rgb(6, 0, 77);">
-        <ui:VisualElement name="ButtonContainer" style="top: 40%; bottom: auto; height: 50%; width: 20%; left: 40%;">
-            <ui:Button text="1 Player" display-tooltip-when-elided="true" name="1PButton" style="width: auto; flex-grow: 1; margin-left: 40px; margin-right: 40px; margin-top: 20px; margin-bottom: 20px; font-size: 40%;" />
-            <ui:Button text="2 Player" display-tooltip-when-elided="true" name="2PButton" style="flex-grow: 1; margin-left: 40px; margin-right: 40px; margin-top: 20px; margin-bottom: 20px; font-size: 40%;" />
-            <ui:Button text="Quit" display-tooltip-when-elided="true" name="QuitButton" style="flex-grow: 1; margin-left: 40px; margin-right: 40px; margin-top: 20px; margin-bottom: 20px; font-size: 40%;" />
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
+            <ui:Label text="WASD: Move&#10;Ctrl: Shoot" display-tooltip-when-elided="true" style="flex-grow: 0; top: 55%; flex-shrink: 0; height: 10%; font-size: 40px; left: 10%; color: rgba(255, 255, 255, 255);" />
+            <ui:VisualElement name="ButtonContainer" style="top: 40%; bottom: auto; height: 50%; width: 20%; left: 25%;">
+                <ui:Button text="1 Player" display-tooltip-when-elided="true" name="1PButton" style="width: auto; flex-grow: 1; margin-left: 40px; margin-right: 40px; margin-top: 20px; margin-bottom: 20px; font-size: 40%;" />
+                <ui:Button text="2 Player" display-tooltip-when-elided="true" name="2PButton" style="flex-grow: 1; margin-left: 40px; margin-right: 40px; margin-top: 20px; margin-bottom: 20px; font-size: 40%;" />
+                <ui:Button text="Quit" display-tooltip-when-elided="true" name="QuitButton" style="flex-grow: 1; margin-left: 40px; margin-right: 40px; margin-top: 20px; margin-bottom: 20px; font-size: 40%;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="left: 35%; top: 50%; flex-grow: 0; flex-shrink: 1;">
+                <ui:VisualElement style="flex-direction: row;">
+                    <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Textures/Powerups.png?fileID=-2011475214&amp;guid=d458f3b02dd28514c8ef2363a25b8bd6&amp;type=3#Powerups_7&apos;); width: 64px; height: 64px;" />
+                    <ui:Label text="Increases score." display-tooltip-when-elided="true" style="-unity-text-align: middle-left; font-size: 40px; margin-left: 10px; color: rgba(255, 255, 255, 255);" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row;">
+                    <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Textures/Powerups.png?fileID=-753718846&amp;guid=d458f3b02dd28514c8ef2363a25b8bd6&amp;type=3#Powerups_4&apos;); width: 64px; height: 64px;" />
+                    <ui:Label text="Increases speed for&#10;a short time." display-tooltip-when-elided="true" style="-unity-text-align: middle-left; font-size: 40px; margin-left: 10px; -unity-background-image-tint-color: rgba(255, 255, 255, 255); color: rgba(255, 255, 255, 255);" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row;">
+                    <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Textures/Powerups.png?fileID=1328054630&amp;guid=d458f3b02dd28514c8ef2363a25b8bd6&amp;type=3#Powerups_3&apos;); width: 64px; height: 64px;" />
+                    <ui:Label text="Increases shooting&#10;speed for a short&#10;time." display-tooltip-when-elided="true" style="-unity-text-align: middle-left; font-size: 40px; margin-left: 10px; -unity-background-image-tint-color: rgba(255, 255, 255, 255); color: rgba(255, 255, 255, 255);" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row;">
+                    <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Textures/Powerups.png?fileID=-1336219550&amp;guid=d458f3b02dd28514c8ef2363a25b8bd6&amp;type=3#Powerups_6&apos;); width: 64px; height: 64px;" />
+                    <ui:Label text="Destroys all asteroids&#10;currently on screen." display-tooltip-when-elided="true" style="-unity-text-align: middle-left; font-size: 40px; margin-left: 10px; -unity-background-image-tint-color: rgba(255, 255, 255, 255); color: rgba(255, 255, 255, 255);" />
+                </ui:VisualElement>
+            </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

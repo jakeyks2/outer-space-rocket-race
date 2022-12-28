@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class MainMenuScript : MonoBehaviour
@@ -17,7 +18,19 @@ public class MainMenuScript : MonoBehaviour
         twoPButton = document.rootVisualElement.Q<Button>("2PButton");
         quitButton = document.rootVisualElement.Q<Button>("QuitButton");
 
+        onePButton.RegisterCallback<ClickEvent>(StartOnePlayer);
+        twoPButton.RegisterCallback<ClickEvent>(StartTwoPlayer);
         quitButton.RegisterCallback<ClickEvent>(Quit);
+    }
+
+    void StartOnePlayer(ClickEvent evt)
+    {
+        SceneManager.LoadScene("1PlayerScene");
+    }
+
+    void StartTwoPlayer(ClickEvent evt)
+    {
+        SceneManager.LoadScene("2PlayerScene");
     }
 
     void Quit(ClickEvent evt)

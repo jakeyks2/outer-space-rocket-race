@@ -13,6 +13,6 @@ public class CameraFollow : MonoBehaviour
     void Update()
     {
         //Sets the position of the camera to the player's position. Makes the camera follow the player
-        transform.position = new Vector3(player.transform.position.x, yOFfset, -10);
+        transform.position = new Vector3(Mathf.Max(player.transform.position.x, 0), yOFfset, -10);
     }
 }

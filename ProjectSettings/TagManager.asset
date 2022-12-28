@@ -8,6 +8,7 @@ TagManager:
   - Powerup
   - UI
   - UI2
+  - Win
   layers:
   - Default
   - TransparentFX
