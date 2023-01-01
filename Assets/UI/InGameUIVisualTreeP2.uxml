@@ -1,9 +1,11 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/ProgessStyle.uss?fileID=7433441132597879392&amp;guid=9ab237d84097260449f127b09d5c37c8&amp;type=3#ProgessStyle" />
     <ui:VisualElement style="top: 50%;">
         <ui:VisualElement style="flex-direction: row; align-items: stretch; justify-content: space-between; top: auto;">
-            <ui:Label text="Label" display-tooltip-when-elided="true" name="Score" style="color: rgb(255, 255, 255); font-size: 20px;" />
-            <ui:Label text="Label" display-tooltip-when-elided="true" name="Time" style="color: rgb(255, 255, 255); font-size: 20px;" />
+            <ui:Label text="Label" display-tooltip-when-elided="true" name="Score" style="color: rgb(255, 255, 255); font-size: 40px;" />
+            <ui:Label text="Label" display-tooltip-when-elided="true" name="Time" style="color: rgb(255, 255, 255); font-size: 40px;" />
         </ui:VisualElement>
         <ui:VisualElement name="PowerupBar" style="flex-direction: row;" />
     </ui:VisualElement>
+    <ui:ProgressBar title=" " low-value="0" high-value="1" name="Progress" style="flex-grow: 0; height: auto; width: 50%; margin-top: 1px; margin-bottom: 1px; padding-bottom: 1px; scale: 1 2; translate: 0 10px; position: absolute; top: 50%; left: 480px;" />
 </ui:UXML>

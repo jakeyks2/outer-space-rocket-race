@@ -52,6 +52,20 @@ public class Player : MonoBehaviour
         }
     }
 
+    private float timerSpeed;
+
+    public float TimerSpeed
+    {
+        get
+        {
+            return timerSpeed;
+        }
+        set
+        {
+            timerSpeed = value;
+        }
+    }
+
     public Camera mainCamera;
 
     // Start is called before the first frame update
@@ -59,12 +73,13 @@ public class Player : MonoBehaviour
     {
         Score = startTime * scoreLossPerSecond;
         TimeRemaining = startTime;
+        TimerSpeed = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Score -= Time.deltaTime * scoreLossPerSecond;
-        TimeRemaining -= Time.deltaTime;
+        Score -= Time.deltaTime * scoreLossPerSecond * TimerSpeed;
+        TimeRemaining -= Time.deltaTime * TimerSpeed;
     }
 }

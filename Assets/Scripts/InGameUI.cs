@@ -8,12 +8,14 @@ using UnityEngine.UIElements;
 public class InGameUI : MonoBehaviour
 {
     public GameObject player;
+    public GameObject end;
     Player playerScript;
     public UIDocument document;
     Label score;
     Label time;
     VisualElement powerupBar;
     List<GameObject> lastPowerups = new List<GameObject>();
+    ProgressBar progress;
 
     private bool isDirty;
     public bool IsDirty
@@ -32,9 +34,10 @@ public class InGameUI : MonoBehaviour
     void Start()
     {
         playerScript = player.GetComponent<Player>();
-        score = (Label)document.rootVisualElement.Q("Score");
-        time = (Label)document.rootVisualElement.Q("Time");
-        powerupBar = document.rootVisualElement.Q("PowerupBar");
+        score = document.rootVisualElement.Q<Label>("Score");
+        time = document.rootVisualElement.Q<Label>("Time");
+        powerupBar = document.rootVisualElement.Q<VisualElement>("PowerupBar");
+        progress = document.rootVisualElement.Q<ProgressBar>("Progress");
     }
 
     // Update is called once per frame
@@ -42,6 +45,7 @@ public class InGameUI : MonoBehaviour
     {
         score.text = $"Score: {playerScript.Score:0}";
         time.text = $"Time: {Mathf.Floor(playerScript.TimeRemaining / 60):0}:{Mathf.Floor(playerScript.TimeRemaining % 60):00}";
+        progress.value = Mathf.Clamp(player.transform.position.x / end.transform.position.x, 0, 1);
         if (IsDirty)
         {
             lastPowerups = playerScript.CurrentPowerups;
@@ -57,6 +61,8 @@ public class InGameUI : MonoBehaviour
         {
             Image icon = new Image();
             icon.sprite = powerup.GetComponent<PowerupEffect>().Sprite;
+            icon.style.height = new Length(64.0f, LengthUnit.Pixel);
+            icon.style.width = new Length(64.0f, LengthUnit.Pixel);
             powerupBar.Add(icon);
         }
 

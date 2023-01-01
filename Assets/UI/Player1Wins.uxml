@@ -1,0 +1,22 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
+        <ui:VisualElement style="flex-direction: column; flex-grow: 1;">
+            <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 6, 72, 255); flex-direction: row; height: 50%;">
+                <ui:VisualElement style="padding-left: 5%; padding-top: 0; align-items: stretch; justify-content: center;">
+                    <ui:Label text="You Win!" display-tooltip-when-elided="true" style="color: rgba(255, 255, 255, 255); font-size: 200px;" />
+                    <ui:Label text="Score: " display-tooltip-when-elided="true" name="Score" style="font-size: 100px; color: rgba(255, 255, 255, 255);" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 4, 63, 255); flex-direction: row; height: 50%;">
+                <ui:VisualElement style="padding-left: 5%; justify-content: center;">
+                    <ui:Label text="You Lose" display-tooltip-when-elided="true" style="color: rgba(255, 255, 255, 255); font-size: 200px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="ButtonContainer" style="width: 20%; height: 50%; justify-content: flex-start; align-items: stretch; top: 25%; right: 10%; position: absolute;">
+            <ui:Button text="Play Again" display-tooltip-when-elided="true" name="PlayAgain" style="margin-left: 40px; margin-right: 40px; margin-top: 20px; margin-bottom: 20px; flex-grow: 1; font-size: 40px;" />
+            <ui:Button text="Main Menu" display-tooltip-when-elided="true" name="MainMenu" style="margin-left: 40px; margin-right: 40px; margin-top: 20px; margin-bottom: 20px; flex-grow: 1; font-size: 40px;" />
+            <ui:Button text="Quit" display-tooltip-when-elided="true" name="Quit" style="margin-left: 40px; margin-right: 40px; margin-top: 20px; margin-bottom: 20px; flex-grow: 1; font-size: 40px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

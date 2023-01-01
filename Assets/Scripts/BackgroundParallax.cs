@@ -20,8 +20,8 @@ public class BackgroundParallax : MonoBehaviour
     void Update()
     {
         //Sets the position of the camera to the player's position with a multiplicative offset. Creates a parallax effect as the player moves
-        transform.position = new Vector2(Mathf.Max(player.transform.position.x, 0), 0);
-        Vector2 offset = new Vector2(Mathf.Max(player.transform.position.x, 0) * parallaxSpeed, yOffset);
+        transform.position = new Vector2(Mathf.Max(player.transform.position.x, 0), yOffset);
+        Vector2 offset = new Vector2(Mathf.Max(player.transform.position.x, 0) * parallaxSpeed, 0);
         meshRenderer.sharedMaterial.SetTextureOffset("_MainTex", offset);
     }
 }

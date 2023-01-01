@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -753718846, guid: d458f3b02dd28514c8ef2363a25b8bd6, type: 3}
+  m_Sprite: {fileID: -1818971524, guid: d458f3b02dd28514c8ef2363a25b8bd6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   duration: 10
   effectPrefab: {fileID: 7873784734297527947, guid: 92974c9caad373a4aab70b6e0da630a2, type: 3}
   uiTag: UI
-  speedBoost: 5
+  timeSlow: 0.5
 --- !u!61 &3835963771395084820
 BoxCollider2D:
   m_ObjectHideFlags: 0

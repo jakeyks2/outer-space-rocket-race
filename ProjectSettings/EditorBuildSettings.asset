@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/YouWin1P.unity
     guid: 8ec26c4ca0f2e694caf376386e886fab
+  - enabled: 1
+    path: Assets/Scenes/Player1Wins.unity
+    guid: b0dccf42c427b5943974bfb161cb03bf
+  - enabled: 1
+    path: Assets/Scenes/Player2Wins.unity
+    guid: 5cbdb2a519c874a49b7f6f4288fa4cc0
   m_configObjects: {}

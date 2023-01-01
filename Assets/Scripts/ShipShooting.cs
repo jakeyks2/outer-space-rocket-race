@@ -13,10 +13,24 @@ public class ShipShooting : MonoBehaviour
 
     private float timeUntilNextLaser = 0;
 
+    private bool autoShoot;
+
+    public bool AutoShoot
+    {
+        get
+        {
+            return autoShoot;
+        }
+        set
+        {
+            autoShoot = value;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        AutoShoot = false;
     }
 
     // Update is called once per frame
@@ -24,7 +38,7 @@ public class ShipShooting : MonoBehaviour
     {
         timeUntilNextLaser -= Time.deltaTime;
 
-        if (Input.GetButtonDown(fireKey) && timeUntilNextLaser <= 0)
+        if ((Input.GetButtonDown(fireKey) || AutoShoot) && timeUntilNextLaser <= 0)
         {
             audioSource.PlayOneShot(laserAudio);
             GameObject laserInstance = Instantiate(laserPrefab, transform.position, transform.rotation);
