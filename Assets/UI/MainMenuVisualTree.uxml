@@ -1,7 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="Main" style="flex-grow: 1; background-color: rgb(6, 0, 77);">
+    <ui:VisualElement name="Main" style="flex-grow: 1; background-color: rgb(0, 0, 64);">
         <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-            <ui:Label text="Player 1:&#10;WASD: Move&#10;F/Left Ctrl: Shoot&#10;&#10;Player 2:&#10;Arrow Keys: Move&#10;Numpad 0/Right Ctrl: Shoot" display-tooltip-when-elided="true" style="flex-grow: 0; top: 35%; flex-shrink: 0; height: 10%; font-size: 40px; left: 2%; color: rgb(255, 255, 255);" />
+            <ui:Label text="Player 1:&#10;WASD: Move&#10;G/Left Ctrl: Shoot&#10;&#10;Player 2:&#10;Arrow Keys: Move&#10;Numpad 0/Right Ctrl: Shoot" display-tooltip-when-elided="true" style="flex-grow: 0; top: 35%; flex-shrink: 0; height: 10%; font-size: 40px; left: 2%; color: rgb(255, 255, 255);" />
             <ui:VisualElement name="ButtonContainer" style="top: 40%; bottom: auto; height: 50%; width: 20%; left: 12%;">
                 <ui:Button text="1 Player" display-tooltip-when-elided="true" name="1PButton" style="width: auto; flex-grow: 1; margin-left: 40px; margin-right: 40px; margin-top: 20px; margin-bottom: 20px; font-size: 40%;" />
                 <ui:Button text="2 Player" display-tooltip-when-elided="true" name="2PButton" style="flex-grow: 1; margin-left: 40px; margin-right: 40px; margin-top: 20px; margin-bottom: 20px; font-size: 40%;" />
@@ -31,4 +31,5 @@
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
+    <ui:VisualElement style="position: absolute; background-image: url(&apos;project://database/Assets/Textures/TitleText.png?fileID=21300000&amp;guid=326cf471bc9bf284dae29880bcd71b42&amp;type=3#TitleText&apos;); height: 190px; width: 1900px; top: 104px; left: 10px;" />
 </ui:UXML>

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PowerupEffect : MonoBehaviour
 {
+    //The player who collected the powerup
     private GameObject player;
     public GameObject Player
     {
@@ -18,6 +19,7 @@ public class PowerupEffect : MonoBehaviour
         }
     }
 
+    //The sprite of the powerup
     private Sprite sprite;
     public Sprite Sprite
     {
@@ -31,6 +33,7 @@ public class PowerupEffect : MonoBehaviour
         }
     }
 
+    //The length the powerup should last
     private float duration;
     public float Duration
     {
@@ -45,6 +48,7 @@ public class PowerupEffect : MonoBehaviour
 
     }
 
+    //The function to run when the powerup is picked up
     private Action<GameObject> onPickup;
     public Action<GameObject> OnPickup
     {
@@ -59,6 +63,7 @@ public class PowerupEffect : MonoBehaviour
 
     }
 
+    //The function to run when the powerup's duration hits 0
     private Action<GameObject> onTimeout;
     public Action<GameObject> OnTimeout
     {
@@ -81,9 +86,11 @@ public class PowerupEffect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Reduces the remaining duration
         Duration -= Time.deltaTime;
         if (Duration <= 0)
         {
+            //Removes the powerup from the player
             player.GetComponent<Player>().CurrentPowerups.Remove(gameObject);
             OnTimeout(player);
             Destroy(gameObject);

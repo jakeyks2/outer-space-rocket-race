@@ -7,6 +7,7 @@ public class CameraFollow : MonoBehaviour
     //Stores the player. Set in the Editor
     public GameObject player;
 
+    //The position of the camera on the y axis
     public float yOFfset;
 
     // Update is called once per frame

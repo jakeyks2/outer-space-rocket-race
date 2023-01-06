@@ -12,6 +12,7 @@ public class AsteroidSimpleMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Moves the asteroid based on its speed and the time since last frame
         transform.Translate(new Vector2(speedX * Time.deltaTime, speedY * Time.deltaTime));
     }
 }

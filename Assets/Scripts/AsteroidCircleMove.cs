@@ -16,6 +16,7 @@ public class AsteroidCircleMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Sets the centre of the circle's rotation to the position it starts in when play begins
         centre = transform.position;
     }
 
@@ -24,6 +25,7 @@ public class AsteroidCircleMove : MonoBehaviour
     {
         //Increase the angle by the speed. Multiplying by deltaTime ensures the rotation speed is unaffected by frame rate
         angle += speed * Time.deltaTime;
+        //Sets the position of the asteroid based on the formula for converting between polar and cartesian coordinates
         transform.position = new Vector2(length * Mathf.Sin(angle), length * Mathf.Cos(angle)) + centre;
     }
 }

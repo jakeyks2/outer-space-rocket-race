@@ -13,6 +13,7 @@ public class ShipShooting : MonoBehaviour
 
     private float timeUntilNextLaser = 0;
 
+    //Whether the player should automatically shoot
     private bool autoShoot;
 
     public bool AutoShoot
@@ -36,14 +37,20 @@ public class ShipShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Updates the cooldown timer
         timeUntilNextLaser -= Time.deltaTime;
 
+        //If the cooldown has finished and the player presses the fire button
         if ((Input.GetButtonDown(fireKey) || AutoShoot) && timeUntilNextLaser <= 0)
         {
+            //Plays a laser sound
             audioSource.PlayOneShot(laserAudio);
+            //Creates a copy of the laser prefab
             GameObject laserInstance = Instantiate(laserPrefab, transform.position, transform.rotation);
+            //Sets the laser velocity
             laserInstance.GetComponent<LaserScript>().velocity = DegreesToVector(transform.rotation.eulerAngles.z + 90) * laserSpeed;
             laserInstance.GetComponent<LaserScript>().owningPlayerScript = gameObject.GetComponent<Player>();
+            //Resets the cooldown
             timeUntilNextLaser = laserCooldown;
         }
     }
